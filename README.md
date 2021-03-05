@@ -11,7 +11,6 @@ This setup was tested using:
 - Compiled, flashed and sliced by Windows 10 (yes, I know...)
 
 ## Credits
----
 
 This setup was based on
 - [8U2_firmware](https://github.com/makerbot/MightyBoardFirmware/tree/master/bootloader/8U2_firmware) by makerbot
@@ -21,7 +20,6 @@ This setup was based on
 - [Flashforge-for-Cura](https://github.com/eugr/Flashforge-for-Cura) by eugr
 
 ## TODO
----
 
 - The gray area on plate (not printable area) is showing inside the printable volume
 - The Start G-code on Printer Settings shows the "config code" not the g-code previously defined
@@ -31,7 +29,6 @@ This setup was based on
 - Improve the wipe nozzle procedure
 
 ## Tools
----
 
 - [USBasp](https://www.google.com/search?client=any&q=Usbasp)
 - [10 to 6 USBasp Adapter](https://www.google.com/search?client=any&q=Usbasp+10+to+6+adapter) (if your USBasp doesn't have)
@@ -43,7 +40,6 @@ This setup was based on
 
 
 ## Marlin Procedure
----
 
 1. Go to [Bootloader README](Bootloader/README.md) and follow the instructions to flash the bootloaders.
 
@@ -59,9 +55,9 @@ This setup was based on
 	* Version.h
 		* #define STRING_DISTRIBUTION_DATE "2019-07-10" (uncomment and change the date -> strong recomendation)
 	* Configuration.h
-		* ??
+		* TODO
 	* Configuration_adv.h
-		* ??
+		* TODO
 
 7. Compile Marlin using ABM
 
@@ -74,7 +70,7 @@ FIGURA DO ABM COMPILADO
 FIGURA DO ABM FLASHING
 
 ## Cura Procedure
----
+
 ### **Into local AppData (preferred for single-user installations)**
 
 This is a preferred way as it should survive application updates.
@@ -99,12 +95,10 @@ This is a preferred way as it should survive application updates.
 2. Copy definitions, extruders and meshes files from this cloned repository into the respective folders opened.
 
 ## Finishing
----
 
 TODO
 
 ## Changelog
----
 
 v0.1 (Mar 05, 2021) - Initial commit with original contents
 

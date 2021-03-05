@@ -6,7 +6,7 @@ The FFCP motherboard used in this steps  was **FF_CreatorBoard_REV D 20140320**.
 By using this guide you are fully aware of the risks involved by such modifications. I hereby take no responsibility for any loss and/or damage to property and/or personnel involved.
 
 ## Procedure
----
+
 > I recommend upgrade your USBasp for the last version (usbasp.2011-05-28). There are a lot of information about it on the internet, but [this tutorial](https://atmega32-avr.com/firmware-upgrade-for-usbasp-clone-fixing-error-setting-usbasp-isp-clock/) or [these steps](https://www.instructables.com/How-to-Update-the-Firmware-on-a-Cheap-USBasp-Clone/) are a good start point.
 
 1. Download the .hex files in [Bootloader/](./Bootloader) (I recommend to clone this repository).
@@ -53,7 +53,6 @@ avrdude -v -p m2560 -c usbasp -P usb -U flash:w:stk500boot_v2_mega2560.hex:i -U 
 ```
 
 ## About the [dcnewman](https://github.com/dcnewman/MightyBoardFirmware-2560-bootloader) Distribuion
----
 
 We are using firmware for the 8U2 chip that was developed by the Arduino team.
 
@@ -66,7 +65,6 @@ The new firmware ignores virtual DTR line changes. It pulls the RESET line down 
 57600 is the baud rate we use for firmware updates. The RESET line is set high for all other baud rates. Normal communication with the bot uses 115200 baud.
 
 ## Recompile the .hex files
----
 
 To recompile the .hex files check the source repositories:
 
