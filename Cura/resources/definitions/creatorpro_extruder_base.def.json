@@ -1,0 +1,30 @@
+{
+    "id": "creatorpro_extruder_base",
+    "version": 2,
+    "name": "Base Extruder (do not use)",
+    "inherits": "fdmextruder",
+    "metadata": {
+        "visible": false
+    },
+    "settings": {
+        "initial_pos_gcode": {
+            "label": "Initial positioning GCode",
+            "description": "Performs initial positioning based on selected extruder",
+            "type": "str",
+            "settable_per_mesh": false,
+            "settable_per_extruder": true,
+            "settable_per_meshgroup": false,
+            "default_value": ""
+        },
+        "nozzle_wipe_gcode": {
+            "label": "Nozzle Wipe GCode",
+            "description": "Performs nozzle wipe based on selected extruder",
+            "type": "str",
+            "settable_per_mesh": false,
+            "settable_per_extruder": true,
+            "settable_per_meshgroup": false,
+            "default_value": ""
+        }
+    },
+    "overrides": {}
+}
