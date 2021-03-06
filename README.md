@@ -21,9 +21,9 @@ This setup was based on
 
 ## TODO
 
-- The gray area on plate (not printable area) is showing inside the printable volume
-- The Start G-code on Printer Settings shows the "config code" not the g-code previously defined
-- Finish this README
+:warning: This project has no a stable version yet (Feb/06/21)
+
+- In Cura, the gray area on plate (not printable area) is showing inside the printable volume
 - Proceed tests using only left extruder
 - Proceed tests using both extruders in the same print
 - Improve the wipe nozzle procedure
@@ -49,44 +49,42 @@ This setup was based on
 
 4. Chose your desired branch (I recommend the bugfix-2.0.x).
 
-5. Replace the Configuration.h, Configuration_adv.h and Version.h by the files in this repository folder: [Marlin/](./Marlin).
+![bugfix-2.0.x branch](./img/vscode_bar_bugfix.jpg "bugfix-2.0.x branch")
+
+5. Replace the Configuration.h, Configuration_adv.h and Version.h with the files in this repository folder: [Marlin/](./Marlin).
 
 6. Change the lines below, if you want:
 	* Version.h
-		* #define STRING_DISTRIBUTION_DATE "2019-07-10" (uncomment and change the date -> strong recomendation)
+		* #define STRING_DISTRIBUTION_DATE "2019-07-10"
+			* uncomment and change the date -> strong recomendation
 	* Configuration.h
-		* TODO
-	* Configuration_adv.h
-		* TODO
+		* #define STRING_CONFIG_H_AUTHOR "(none, default config)"
+			* good practice if you share these files 
 
-7. Compile Marlin using ABM
-
-FIGURA DO ABM COMPILADO
-
-8. Connect the printer USB cable on the computer and upload Marlin.
+7. Connect the printer USB cable on the computer.
 
 > Make sure that the drivers are installed. If you get any issue about it, try to install Arduino IDE (you can select only to install the drivers).
 
-FIGURA DO ABM FLASHING
+8. Flash Marlin in FFCP
+	
+	1. Select the "MightyBoard2560 (Marlin)" environment
+	2. Build and Upload
+
+![Build and Upload](./img/vscode_bar_build.jpg "Build and Upload")
 
 ## Cura Procedure
 
-### **Into local AppData (preferred for single-user installations)**
+### **Into local AppData**
 
-This is a preferred way as it should survive application updates.
+Preferred for single-user installations. This is a preferred way as it should survive application updates.
 
 1. Open Cura library folder located at `C:\Users\your_username\AppData\Roaming\cura\4.X` (check your current version).
 
 2. Copy definitions, extruders and meshes files from this cloned repository into the respective folders opened. You may need to create `meshes` folder first.
 
-### **Into application folder (if you have multiple user accounts on your PC that need to use this printer)**
+### **Into application folder**
 
-> **Atention:** If you change this folder, Cura can show you a message like "Can't Start" or "Configuration Error". It will reset your setings (make Cura as if it has just been installed)! Make sure that you have backup of your Material, Machine and Print Profiles.
->
->![Cura can't start](./img/cura_open_error1.jpg)
->
->![Configuration errors](./img/cura_open_error2.jpg)
-
+If you have multiple user accounts on your PC that need to use this printer
 
 > **Tip:** You will need an Administrator access
 
@@ -94,9 +92,19 @@ This is a preferred way as it should survive application updates.
 
 2. Copy definitions, extruders and meshes files from this cloned repository into the respective folders opened.
 
+> **Atention:** If you change this folder, Cura can show you a message like "Can't Start" or "Configuration Error". It will reset your setings (make Cura as if it has just been installed)! Make sure that you have backup of your Material, Machine and Print Profiles.
+>
+>![Cura can't start](./img/cura_open_error1.jpg "Cura can't start")
+>
+>![Configuration errors](./img/cura_open_error2.jpg "Configuration errors")
+
 ## Finishing
 
-TODO
+Launch Cura and click on Add Printer in the printer selection dropdown. You should be able to see FlashForge Creator Pro in the list.
+
+In Cura the extruder 1 is right and extruder 2 is left. The easiest way to disable/enable specific extruder is to go to Settings menu and do it from there as they are named properly in it.
+
+In FFCP disply menu the extruder 0 is right and extruder 1 is left.
 
 ## Changelog
 

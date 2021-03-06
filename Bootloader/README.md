@@ -27,7 +27,7 @@ By using this guide you are fully aware of the risks involved by such modificati
 
 ![ICSP Connectors](./../img/ubsasp_icsp_position2.jpg)
 
-> Ensure the Board is Powered by USB or power cable
+> Ensure the Board is Powered by USBasp or power cable
 
 6. Open command terminal and navigate to the AVRDUDE directory 
 
