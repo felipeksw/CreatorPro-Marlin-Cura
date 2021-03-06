@@ -16,8 +16,8 @@
        ],
        "nozzle_offsetting_for_disallowed_areas":true,
        "machine_extruder_trains":{
-          "0":"ff_creator_pro_extruder_0",
-          "1":"ff_creator_pro_extruder_1"
+          "1":"ff_creator_pro_extruder_1",
+          "2":"ff_creator_pro_extruder_2"
        }
     },
     "settings":{
