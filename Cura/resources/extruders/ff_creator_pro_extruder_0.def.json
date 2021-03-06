@@ -1,28 +1,52 @@
 {
-    "id": "creatorpro_extruder_1",
-    "version": 2,
-    "name": "Right Extruder",
-    "inherits": "creatorpro_extruder_base",
-    "metadata": {
-        "machine": "flashforgecreatorpro",
-        "position": "0"
+    "id":"ff_creator_pro_extruder_0",
+    "version":3,
+    "name":"Right Extruder",
+    "inherits":"ff_creator_pro_extruder_base",
+    "metadata":{
+       "machine":"ff_creator_pro",
+       "position":"0"
     },
-    "overrides": {
-        "extruder_nr": {
-            "default_value": 0,
-            "maximum_value": "1"
-        },
-        "machine_nozzle_size": { "default_value": 0.4 },
-        "material_diameter": { "default_value": 1.75 },
-        "machine_nozzle_offset_x": { "default_value": 0.0 },
-        "machine_nozzle_offset_y": { "default_value": 0.0 },
-        "machine_extruder_start_pos_abs": { "default_value": true },
-        "machine_extruder_start_pos_x": { "value": "machine_width/2 - 1" },
-        "machine_extruder_start_pos_y": { "value": "machine_depth/2 - 1" },
-        "machine_extruder_end_pos_abs": { "default_value": true },
-        "machine_extruder_end_pos_x": { "value": "machine_width/2 - 1" },
-        "machine_extruder_end_pos_y": { "value": "machine_depth/2 - 1" },
-        "initial_pos_gcode": { "default_value": "G1 X150 Y-70 Z30 F9000 ; move to wait position right hand side of the table" },
-        "nozzle_wipe_gcode": { "default_value": "G1 X110 Y-70 E25 F300 ; purge nozzle\nG1 X120 Y-70 Z0.15 F1200 ; slow wipe\nG1 X110 Y-70 Z0.5 F1200 ; lift" }
+    "overrides":{
+       "extruder_nr":{
+          "default_value":0,
+          "maximum_value":"1"
+       },
+       "machine_nozzle_size":{
+          "default_value":0.4
+       },
+       "material_diameter":{
+          "default_value":1.75
+       },
+       "machine_nozzle_offset_x":{
+          "default_value":0.0
+       },
+       "machine_nozzle_offset_y":{
+          "default_value":0.0
+       },
+       "machine_extruder_start_pos_abs":{
+          "default_value":true
+       },
+       "machine_extruder_start_pos_x":{
+          "value":"machine_width/2 - 1"
+       },
+       "machine_extruder_start_pos_y":{
+          "value":"machine_depth/2 - 1"
+       },
+       "machine_extruder_end_pos_abs":{
+          "default_value":true
+       },
+       "machine_extruder_end_pos_x":{
+          "value":"machine_width/2 - 1"
+       },
+       "machine_extruder_end_pos_y":{
+          "value":"machine_depth/2 - 1"
+       },
+       "initial_pos_gcode":{
+          "default_value":"G1 X150 Y-70 Z30 F9000 ; move to wait position right hand side of the table"
+       },
+       "nozzle_wipe_gcode":{
+          "default_value":"G1 X110 Y-70 E25 F300 ; purge nozzle\nG1 X120 Y-70 Z0.15 F1200 ; slow wipe\nG1 X110 Y-70 Z0.5 F1200 ; lift"
+       }
     }
-}
+ }
