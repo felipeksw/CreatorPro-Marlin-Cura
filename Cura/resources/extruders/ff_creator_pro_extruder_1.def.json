@@ -1,6 +1,6 @@
 {
     "id":"ff_creator_pro_extruder_1",
-    "version":3,
+    "version":2,
     "name":"Left Extruder",
     "inherits":"ff_creator_pro_extruder_base",
     "metadata":{

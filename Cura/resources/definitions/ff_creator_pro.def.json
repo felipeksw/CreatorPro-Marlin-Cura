@@ -1,7 +1,7 @@
 {
     "id":"ff_creator_pro",
     "name":"Flashforge Creator Pro",
-    "version":3,
+    "version":2,
     "inherits":"fdmprinter",
     "metadata":{
        "visible":true,
@@ -156,7 +156,7 @@
           "default_value":false
        },
        "machine_start_gcode":{
-          "default_value":"dual_gcode if len(extruderValues('extruder_nr')) > 1 else single_gcode"
+          "value":"dual_gcode if len(extruderValues('extruder_nr')) > 1 else single_gcode"
        },
        "machine_end_gcode":{
           "default_value":"; *** FlashForge Creator Pro end.gcode ***\nM73 P100 ;end build progress\nG90 ;absolute positioning\nG1 Z150 F1000 ;send Z axis to bottom of machine\nM140 S80 ;cool down bed\nM104 S0 T0 ;cool down right extruder\nM104 S0 T1 ;cool down left extruder\nM107 ;fan off\nG28 X Y ;auto home X and Y\nM18 ;disable stepper\nM117 **Finished** ;set LCD message\nM300 S260 P80 ;play 3 beeps\nM300 S260 P80\nM300 S260 P80\n; *** end of end.gcode ***"
