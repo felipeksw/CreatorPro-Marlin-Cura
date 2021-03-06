@@ -34,7 +34,7 @@ By using this guide you are fully aware of the risks involved by such modificati
 7. Load the 8U2 with bootloader, and set proper lock bits using this command:
 
 ```bash
-avrdude -p at90usb82 -F -P usb -c avrispmkii -U flash:w:Makerbot-usbserial.hex -U lfuse:w:0xFF:m -U hfuse:w:0xD9:m -U efuse:w:0xF4:m -U lock:w:0x0F:m
+avrdude -v -C avrdude.conf -p m8u2 -P usb -c usbasp -U flash:w:Makerbot-usbserial.hex:i -U lfuse:w:0xFF:m -U hfuse:w:0xD9:m -U efuse:w:0xF4:m -U lock:w:0x0F:m 
 ```
 > If unsuccessful ("Error in USB Receive"), try again.  It sometimes takes a few tries
 
@@ -49,7 +49,7 @@ avrdude -v -p m2560 -c usbasp -P usb -U lock:w:0x3F:m -U efuse:w:0xFD:m -U hfuse
 10. Load the ATMEGA2560 with the bootloader, and set proper lock bits using this command:
 
 ```bash
-avrdude -v -p m2560 -c usbasp -P usb -U flash:w:stk500boot_v2_mega2560.hex:i -U lock:w:0x0f:m
+avrdude -v -C avrdude.conf -p m2560 -P usb -c usbasp -U flash:w:stk500boot_v2_mega2560.hex:i -U lock:w:0x0f:m
 ```
 
 ## About the [dcnewman](https://github.com/dcnewman/MightyBoardFirmware-2560-bootloader) Distribuion
