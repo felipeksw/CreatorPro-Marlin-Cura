@@ -59,35 +59,24 @@
        "machine_center_is_zero":{
           "default_value":true
        },
-       "machine_height":{
-          "default_value":145
+       "machine_width":{
+          "default_value":227
        },
        "machine_depth":{
-          "default_value":152
-       },
-       "machine_width":{
-          "default_value":231
-       },
+         "default_value":148
+      },
+       "machine_height":{
+         "default_value":150
+      },
        "machine_head_with_fans_polygon":{
-          "default_value":[
-             [
-                -2,
-                2
-             ],
-             [
-                2,
-                2
-             ],
-             [
-                2,
-                -2
-             ],
-             [
-                -2,
-                -2
-             ]
-          ]
+         "default_value":[
+         ]
+
        },
+       "nozzle_disallowed_areas":{
+         "default_value":[
+         ]
+      },       
        "machine_max_feedrate_x":{
           "default_value":300
        },

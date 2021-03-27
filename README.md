@@ -6,7 +6,7 @@ By using this guide you are fully aware of the risks involved by such modificati
 
 This setup was tested using:
 - Ultimaker Cura 4.8.0
-- Marlin bugfix-2.0.x (branch hash fd247792 on Feb 13 2021)
+- Marlin bugfix-2.0.x (branch hash 5da744ea on Mar 27 2021)
 - Flashforge Creator Pro (FF_CreatorBoard_REV D 20140320)
 - Compiled, flashed and sliced by Windows 10 (yes, I know...)
 
@@ -20,8 +20,6 @@ This setup was based on
 - [Flashforge-for-Cura](https://github.com/eugr/Flashforge-for-Cura) by eugr
 
 ## TODO
-
-:warning: This project has no a stable version yet (Feb/06/21)
 
 - In Cura, the gray area on plate (not printable area) is showing inside the printable volume
 - Proceed tests using only left extruder
@@ -63,7 +61,7 @@ This setup was based on
 
 7. Connect the printer USB cable on the computer.
 
-> Make sure that the drivers are installed. If you get any issue about it, try to install Arduino IDE (you can select only to install the drivers).
+>Make sure that the drivers are installed. If you get any issue about it, try to install Arduino IDE (you can select only to install the drivers).
 
 8. Flash Marlin in FFCP
 	
@@ -71,6 +69,16 @@ This setup was based on
 	2. Build and Upload
 
 ![Build and Upload](./img/vscode_bar_build.jpg "Build and Upload")
+
+>If you got a error similar to:
+>
+>*Error: Build environment 'MightyBoard2560' is incompatible with BOARD_MIGHTYBOARD_REVE. Use one of these: mega2560ext, mega1280*
+>
+>1. Go to `Marlin/src/pins/pins.h`
+>2. Search for `pins_MIGHTYBOARD_REVE.h`
+>3. At the end of the line, add `env:MightyBoard2560`
+>4. Build again
+>- Example: [pins.h](Marlin/src/pins/pins.h) at line 224
 
 ## Cura Procedure
 
@@ -86,13 +94,13 @@ Preferred for single-user installations. This is a preferred way as it should su
 
 If you have multiple user accounts on your PC that need to use this printer
 
-> **Tip:** You will need an Administrator access
+>**Tip:** You will need an Administrator access
 
 1. Open Cura application resources folder located at `C:\Program Files\Ultimaker Cura 4.X.X\resources` (check your current version).
 
 2. Copy definitions, extruders and meshes files from this cloned repository into the respective folders opened.
 
-> **Atention:** If you change this folder, Cura can show you a message like "Can't Start" or "Configuration Error". It will reset your setings (make Cura as if it has just been installed)! Make sure that you have backup of your Material, Machine and Print Profiles.
+>**Atention:** If you change this folder, Cura can show you a message like "Can't Start" or "Configuration Error". It will reset your setings (make Cura as if it has just been installed)! Make sure that you have backup of your Material, Machine and Print Profiles.
 >
 >![Cura can't start](./img/cura_open_error1.jpg "Cura can't start")
 >
@@ -106,7 +114,16 @@ In Cura the extruder 1 is right and extruder 2 is left. The easiest way to disab
 
 In FFCP disply menu the extruder 0 is right and extruder 1 is left.
 
+If you need to connect the printer using USB (to use Pronterface, for example), uses 115200 baud rate.
+
 ## Changelog
 
-v0.1 (Mar 05, 2021) - Initial commit with original contents
+v0.2 (Mar 27, 2021):
+- Add build environment error tip
+- Marlin configs file for new bugfix-2.0.x (5da744ea on Mar 27 2021)
+- Cura profiles update
+- Update this README
+
+v0.1 (Mar 05, 2021):
+- Initial commit with original contents
 
