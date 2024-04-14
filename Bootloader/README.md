@@ -51,7 +51,7 @@ avrdude -v -p m2560 -c usbasp -P usb -U lock:w:0x3F:m -U efuse:w:0xFD:m -U hfuse
 avrdude -v -p m2560 -P usb -c usbasp -U flash:w:MightyBoardFirmware-2560-bootloader/stk500boot_v2_mega2560.hex:i -U lock:w:0x0f:m
 ```
 
-11. Disconnect 
+11. Disconnect the USBasp cable.  You're done loading the bootloader!
 
 ## About the [dcnewman](https://github.com/dcnewman/MightyBoardFirmware-2560-bootloader) Distribuion
 
