@@ -24,7 +24,7 @@ By using this guide you are fully aware of the risks involved by such modificati
 ![ICSP Connectors](./../img/ubsasp_icsp_position2.jpg)
 
 > [!NOTE]
-> Ensure that the motherboard is powered. The USBasp cable should provide sufficient power, but if it does not, you will need to supply power otherwise.
+> Ensure that the motherboard is powered. The USBasp cable should provide 5V of power, but if it does not, you will need to supply power otherwise.
 
 5. Open a command terminal and navigate to the downloaded `Bootloader/` folder.
 
